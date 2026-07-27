@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | Extra Effort Career Classes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#08142b,#214e8a);
+    color:#fff;
+}
+
+.results-page{
+    min-height:100vh;
+    padding:70px 30px;
+}
+
+.results-heading{
+    text-align:center;
+    margin:50px auto;
+}
+
+.results-heading h1{
+    font-size:48px;
+    color:#ff8c1a;
+    margin-bottom:12px;
+}
+
+.results-heading h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.results-heading p{
+    font-size:22px;
+    color:#ffffff;
+}
+
+.future-star{
+    margin-top:35px;
+    font-size:34px;
+    font-weight:bold;
+    color:#FFD54A;
+    text-transform:uppercase;
+}
+
+.future-line{
+    margin-top:12px;
+    font-size:26px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+.students-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:28px;
+    margin-top:60px;
+    justify-items:center;
+}
+
+.student-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:22px;
+    text-align:center;
+    color:#111;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.student-card:hover{
+    transform:translateY(-8px);
+}
+
+.future-card{
+    grid-column:2 / span 3;
+    width:100%;
+    max-width:520px;
+    justify-self:center;
+    margin-top:25px;
+    border:4px solid #ffb400;
+    box-shadow:0 12px 35px rgba(255,180,0,.35);
+    transform:scale(1.08);
+}
+.student-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+    opacity:.35;
+}
+
+.rank{
+    display:inline-block;
+    background:#08142b;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.student-card h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.student-card p{
+    color:#555;
+}
+
+@media(max-width:1000px){
+
+.students-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:650px){
+
+.students-grid{
+grid-template-columns:1fr;
+}
+
+.results-heading h1{
+font-size:34px;
+}
+
+.results-heading h2{
+font-size:24px;
+}
+
+.future-star{
+font-size:24px;
+}
+
+.future-line{
+font-size:20px;
+}
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+<div class="brand">
+
+<img src="assets/logo.png" alt="Logo">
+
+<div class="brand-text">
+
+<div class="brand-top">
+
+<span class="extra">EXTRA</span>
+<span class="effort">EFFORT</span>
+
+</div>
+
+<div class="brand-bottom">
+CAREER CLASSES
+</div>
+
+</div>
+
+</div>
+
+<div class="nav-right">
+
+<ul class="menu">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li>
+    <a href="payment.html" class="payment-btn">
+        Fee<br>Payment
+    </a>
+</li>
+<li><a href="results.html">Results</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<a href="https://wa.me/919307703201" class="admission-btn">
+Admission Open
+</a>
+
+</div>
+
+</nav>
+
+<section class="results-page">
+
+<div class="results-heading">
+
+<h1>OUR TOP ACHIEVERS</h1>
+
+<h2>Proud of our students who created history with Extra Effort</h2>
+
+<div class="future-star">
+⭐ ONE OF THESE SPACES IS FOR YOU ⭐
+</div>
+
+<div class="future-line">
+DO EXTRA EFFORT &amp; MAKE HISTORY
+</div>
+
+</div>
+
+<div class="students-grid">
+    
+<!-- AIR Rank Cards -->
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 1
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 2
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 3
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 4
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 5
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 6
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 7
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 8
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 9
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<div class="student-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+AIR - 10
+</div>
+
+<h3>Student Name</h3>
+<p>NEET UG Achiever</p>
+
+</div>
+
+
+<!-- Future Achiever Space -->
+
+<div class="student-card future-card">
+
+<div class="silhouette">
+</div>
+
+<div class="rank">
+YOUR TURN
+</div>
+
+<h3>One of these spaces<br>is for YOU</h3>
+
+<p>Do Extra Effort & Make History</p>
+
+</div>
+
+
+</div>
+
+<style>
+
+.silhouette{
+    width:120px;
+    height:120px;
+    margin:0 auto 15px;
+    position:relative;
+    background:#d9d9d9;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+
+/* Head */
+
+.silhouette::before{
+
+    content:"";
+    position:absolute;
+    width:45px;
+    height:45px;
+    background:#555;
+    border-radius:50%;
+    top:18px;
+    left:38px;
+
+}
+
+/* Body */
+
+
+
+.future-card{
+
+    border:4px solid #ffb400;
+    transform:scale(1.05);
+
+}
+
+
+.future-card .rank{
+
+    background:#ff8c1a;
+
+}
+</style>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h3>EXTRA EFFORT CAREER CLASSES</h3>
+<p>
+NEET Biology Preparation<br>
+with Rajesh Kumar Singh
+</p>
+</div>
+
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="results.html">Results</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-box payment">
+
+<h3>Pay Course Fee</h3>
+
+<img src="assets/payment-qr.png" 
+alt="Payment QR Code">
+
+<p>UPI ID:</p>
+
+<a href="upi://pay?pa=9307703201@axl">
+9307703201@axl
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 EXTRA EFFORT CAREER CLASSES  
+<br>
+Extra effort today, sure success tomorrow
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>
