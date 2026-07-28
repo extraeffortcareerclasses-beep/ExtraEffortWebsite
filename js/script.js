@@ -22,7 +22,7 @@ function moveSlide(){
 
 
 function startSlider(){
-    autoSlide = setInterval(moveSlide,4000);
+    autoSlide = setInterval(moveSlide,3000);
 }
 
 
@@ -56,10 +56,15 @@ batchCards.forEach((_, i) => {
 
     if(i===0) dot.classList.add("active");
 
-    dot.addEventListener("click", () => {
-        batchIndex = i;
-        updateBatchSlider();
-    });
+ dot.addEventListener("click", () => {
+
+    batchIndex = i;
+
+    updateBatchSlider();
+
+    startBatchSlider();
+
+});
 
     batchDots.appendChild(dot);
 });
@@ -71,7 +76,7 @@ function updateBatchSlider(){
     batchTrack.style.transform =
         `translateX(-${batchIndex*100}%)`;
 
-    dots.forEach(dot=>dot.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
     dots[batchIndex].classList.add("active");
 }
 
@@ -79,39 +84,51 @@ function nextBatch(){
 
     batchIndex++;
 
-    if(batchIndex>=batchCards.length){
-        batchIndex=0;
+    if(batchIndex >= batchCards.length){
+        batchIndex = 0;
     }
 
     updateBatchSlider();
+    startBatchSlider();
 }
 
 function prevBatch(){
 
     batchIndex--;
 
-    if(batchIndex<0){
-        batchIndex=batchCards.length-1;
+    if(batchIndex < 0){
+        batchIndex = batchCards.length - 1;
     }
 
     updateBatchSlider();
+    startBatchSlider();
 }
 
-batchNext.addEventListener("click",nextBatch);
-batchPrev.addEventListener("click",prevBatch);
+batchNext.addEventListener("click", nextBatch);
+batchPrev.addEventListener("click", prevBatch);
 
 function startBatchSlider(){
-    batchAuto=setInterval(nextBatch,3000);
+
+    clearTimeout(batchAuto);
+
+    let delay = (batchIndex === 0) ? 4000 : 3000;
+
+    batchAuto = setTimeout(() => {
+        nextBatch();
+    }, delay);
+
 }
 
 function stopBatchSlider(){
-    clearInterval(batchAuto);
+
+    clearTimeout(batchAuto);
+
 }
 
 document.querySelector(".batch-slider")
-.addEventListener("mouseenter",stopBatchSlider);
+.addEventListener("mouseenter", stopBatchSlider);
 
 document.querySelector(".batch-slider")
-.addEventListener("mouseleave",startBatchSlider);
+.addEventListener("mouseleave", startBatchSlider);
 
 startBatchSlider();
