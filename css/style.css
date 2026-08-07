@@ -322,29 +322,23 @@ body{
 /*================ ABOUT SECTION =================*/
 
 .about{
-    padding:100px 8%;
-    background:#f8f9fc;
+    padding:40px 4%;
 }
 
 .about-container{
     max-width:1200px;
-    margin:0 auto;
+    margin:auto;
     display:grid;
-    grid-template-columns:42% 58%;
-    gap:60px;
+    grid-template-columns:48% 52%;
+    gap:30px;
     align-items:center;
-    padding:80px 40px;
+    padding:15px 0;
 }
 .about-image img{
     width:100%;
-    max-width:480px;
-    border-radius:18px;
+    max-width:520px;
     display:block;
     margin:auto;
-}
-
-.about-image img{
-    width:145%;
     border-radius:22px;
     border:6px solid white;
     box-shadow:0 20px 45px rgba(0,0,0,.18);
@@ -402,7 +396,7 @@ body{
 }
 
 .about-content h2{
-    font-size: 34px;
+    font-size: 36px;
     line-height: 1.2;
     text-align: center;
     margin-bottom: 20px;
@@ -416,17 +410,13 @@ body{
 
 .about-content h3{
 
-    font-size:34px;
-
-    color:#222;
-
-    line-height:1.4;
-
-    margin-bottom:30px;
+    font-size: 34px;
+    line-height: 1.4;
+    margin-bottom: 30px;
 }
 
 .about-content p{
-    font-size: 20px;
+    font-size: 26px;
     line-height: 1.8;
     text-align: center;
     margin-bottom: 18px;
@@ -439,44 +429,63 @@ body{
     color:#214e8a;
 }
 
-@media(max-width:900px){
+@media (max-width:900px){
 
-.about-container{
+    .about{
+        padding:30px 5%;
+    }
 
-flex-direction:column;
+    .about-container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:25px;
+        padding:0;
+        align-items:center;
+        text-align:center;
+    }
 
-text-align:center;
+    .about-image{
+        order:1;
+    }
 
-}
+    .about-image img{
+        width:100%;
+        max-width:420px;
+        display:block;
+        margin:0 auto;
+    }
 
-.about-image,
+    .about-content{
+        order:2;
+        width:100%;
+        margin:0;
+        padding:0;
+    }
 
-.about-content{
+    .about-content h2{
+        font-size:32px;
+        line-height:1.2;
+    }
 
-width:100%;
+    .about-content p{
+        font-size:18px;
+        line-height:1.8;
+    }
 
-}
+    .experience-badge{
+        top:10px;
+        left:10px;
+        width:55px;
+        height:55px;
+    }
 
-.experience-badge{
+    .experience-badge h3{
+        font-size:16px;
+    }
 
-right:20px;
-
-top:20px;
-
-}
-
-.about-content h2{
-
-font-size:36px;
-
-}
-
-.about-content h3{
-
-font-size:30px;
-
-}
-
+    .experience-badge p{
+        font-size:7px;
+    }
 }
 /* WHY US SECTION */
 
@@ -494,7 +503,7 @@ font-size:30px;
 
 .why-us > p{
     text-align:center;
-    font-size:20px;
+    font-size:26px;
     margin-bottom:40px;
 }
 
