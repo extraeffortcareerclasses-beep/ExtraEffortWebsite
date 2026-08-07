@@ -104,8 +104,13 @@ function prevBatch(){
     startBatchSlider();
 }
 
-batchNext.addEventListener("click", nextBatch);
-batchPrev.addEventListener("click", prevBatch);
+if (batchNext) {
+    batchNext.addEventListener("click", nextBatch);
+}
+
+if (batchPrev) {
+    batchPrev.addEventListener("click", prevBatch);
+}
 
 function startBatchSlider(){
 
@@ -125,10 +130,10 @@ function stopBatchSlider(){
 
 }
 
-document.querySelector(".batch-slider")
-.addEventListener("mouseenter", stopBatchSlider);
+// document.querySelector(".batch-slider")
+// .addEventListener("mouseenter", stopBatchSlider);
 
-document.querySelector(".batch-slider")
-.addEventListener("mouseleave", startBatchSlider);
+// document.querySelector(".batch-slider")
+// .addEventListener("mouseleave", startBatchSlider);
 
 startBatchSlider();
