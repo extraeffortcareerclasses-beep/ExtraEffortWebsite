@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admission Open | Extra Effort Career Classes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        .header {
+            background: #214E8A;
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 35px auto;
+            padding: 0 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+        }
+
+        .card h2 {
+            text-align: center;
+            color: #214E8A;
+            margin-top: 0;
+        }
+
+        .offer {
+            text-align: center;
+            background: #fff3cd;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #F57C00;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>EXTRA EFFORT CAREER CLASSES</h1>
+        <p>Premium Online Biology Classes for NEET</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>FREE 3-DEMO REGISTRATION</h2>
+
+            <div class="offer">
+                Experience Rajesh Sir's Biology Classes before joining.
+            </div>
+
+            <form id="admissionForm">
+
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    required
+                    placeholder="Enter student name"
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Enter email address"
+                >
+
+                <label for="whatsapp">WhatsApp Number</label>
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    required
+                    placeholder="Enter WhatsApp number"
+                >
+
+                <label for="studentClass">Class</label>
+                <select id="studentClass" required>
+                    <option value="">Select Class</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option>
+                    <option value="12th Passed">12th Passed</option>
+                </select>
+
+                <label for="neetYear">NEET Target Year</label>
+                <select id="neetYear" required>
+                    <option value="">Select NEET Year</option>
+                    <option value="NEET 2027">NEET 2027</option>
+                    <option value="NEET 2028">NEET 2028</option>
+                    <option value="NEET 2029">NEET 2029</option>
+                </select>
+
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    id="city"
+                    required
+                    placeholder="Enter your city"
+                >
+
+                <label for="mode">Preferred Mode</label>
+                <select id="mode" required>
+                    <option value="">Select Mode</option>
+                    <option value="Online">Online</option>
+                </select>
+
+                <button type="submit">
+                    Register for FREE 3-Demo
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Extra Effort Career Classes | Rajesh Sir
+    </div>
+
+
+    <script>
+
+        /*
+         * IMPORTANT:
+         * Replace the URL below with the NEW WEB APP URL
+         * copied from Google Apps Script Deployment.
+         */
+
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxGm9CaQHCCyB_-bT8PB6lmH1coAa5I8ike1Z8PBNlE0k1DnyGqdnxlQnwv8VQyEavK6g/exec";
+
+
+        document
+            .getElementById("admissionForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const message = document.getElementById("message");
+                const button = this.querySelector("button");
+
+                const data = {
+                    type: "freeDemoRegistration",
+
+                    studentName:
+                        document.getElementById("studentName").value.trim(),
+
+                    email:
+                        document.getElementById("email").value.trim(),
+
+                    whatsapp:
+                        document.getElementById("whatsapp").value.trim(),
+
+                    studentClass:
+                        document.getElementById("studentClass").value,
+
+                    neetYear:
+                        document.getElementById("neetYear").value,
+
+                    city:
+                        document.getElementById("city").value.trim(),
+
+                    mode:
+                        document.getElementById("mode").value
+                };
+
+
+                button.disabled = true;
+                button.textContent = "Submitting...";
+
+
+                fetch(SCRIPT_URL, {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8"
+                    },
+
+                    body: JSON.stringify(data),
+
+                    mode: "no-cors"
+                })
+                .then(function() {
+
+                    message.style.display = "block";
+                    message.style.background = "#d4edda";
+                    message.style.color = "#155724";
+
+                    message.textContent =
+                        "Registration submitted successfully! We will contact you shortly.";
+
+                    document.getElementById("admissionForm").reset();
+
+                    button.disabled = false;
+                    button.textContent = "Register for FREE 3-Demo";
+
+                })
+                .catch(function(error) {
+
+                    console.error(error);
+
+                    message.style.display = "block";
+                    message.style.background = "#f8d7da";
+                    message.style.color = "#721c24";
+
+                    message.textContent =
+                        "Something went wrong. Please try again.";
+
+                    button.disabled = false;
+                    button.textContent = "Register for FREE 3-Demo";
+
+                });
+
+            });
+
+    </script>
+
+</body>
+</html>
