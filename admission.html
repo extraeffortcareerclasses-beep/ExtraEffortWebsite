@@ -192,10 +192,11 @@
                 >
 
                 <label for="mode">Preferred Mode</label>
-                <select id="mode" required>
-                    <option value="">Select Mode</option>
-                    <option value="Online">Online</option>
-                </select>
+                <select id="preferredMode" required>
+                <option value="">Select Mode</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
 
                 <button type="submit">
                     Register for FREE 3-Demo
@@ -256,7 +257,7 @@
                         document.getElementById("city").value.trim(),
 
                     mode:
-                        document.getElementById("mode").value
+                        document.getElementById("preferredMode").value
                 };
 
 
