@@ -150,6 +150,14 @@
                     required
                     placeholder="Enter student name"
                 >
+                 
+                <label for="parentName">Parent Name</label>
+                <input
+                   type="text"
+                   id="parentName"
+                   required
+                   placeholder="Enter parent name"
+                 >
 
                 <label for="email">Email</label>
                 <input
@@ -238,8 +246,12 @@
                 const data = {
                     type: "freeDemoRegistration",
 
+                   
                     studentName:
                         document.getElementById("studentName").value.trim(),
+
+                    parentName:
+                       document.getElementById("parentName").value.trim(),
 
                     email:
                         document.getElementById("email").value.trim(),
