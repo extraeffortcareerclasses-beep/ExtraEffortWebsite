@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EECC CBT Exam Portal | Extra Effort Career Classes</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #06152f;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            width: 100%;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 5%;
+            background: rgba(4, 16, 38, 0.97);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            line-height: 1.05;
+        }
+
+        .brand-top {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .extra {
+            color: #214e8a;
+        }
+
+        .effort {
+            color: #f57c00;
+        }
+
+        .brand-bottom {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand-course {
+            font-size: 9px;
+            margin-top: 4px;
+        }
+
+        .brand-tagline {
+            font-size: 8px;
+            margin-top: 3px;
+            color: #ffd54f;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ffd54f;
+        }
+
+        .cbt-nav {
+            color: #ffd54f !important;
+            font-weight: 800 !important;
+        }
+
+        .payment-btn {
+            background: #ff7043;
+            padding: 9px 14px;
+            border-radius: 9px;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .admission-btn {
+            background: #19c463;
+            padding: 10px 17px;
+            border-radius: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* ================= HERO ================= */
+
+        .cbt-hero {
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 7%;
+            background:
+                radial-gradient(
+                    circle at 50% 45%,
+                    #123f91 0%,
+                    #09245a 32%,
+                    #04132e 72%
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative glow */
+
+        .cbt-hero::before {
+            content: "";
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            background: rgba(0, 100, 255, 0.12);
+            top: -280px;
+            left: -220px;
+        }
+
+        .cbt-hero::after {
+            content: "";
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            background: rgba(255, 120, 0, 0.06);
+            bottom: -300px;
+            right: -180px;
+        }
+
+        .cbt-container {
+            width: 100%;
+            max-width: 1180px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ================= LEFT CONTENT ================= */
+
+        .cbt-content {
+            text-align: left;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 124, 0, 0.18);
+            border: 1px solid rgba(245, 124, 0, 0.55);
+            color: #ffd166;
+            padding: 9px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            margin-bottom: 22px;
+        }
+
+        .cbt-content h1 {
+            font-size: clamp(45px, 6vw, 76px);
+            line-height: 0.98;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .cbt-content h1 .yellow {
+            color: #ffd54f;
+        }
+
+        .cbt-content h1 .orange {
+            color: #f57c00;
+        }
+
+        .cbt-subtitle {
+            font-size: clamp(22px, 3vw, 34px);
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        .cbt-description {
+            max-width: 650px;
+            color: #d7e4fb;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        /* ================= HIGHLIGHTS ================= */
+
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 9px 13px;
+            border-radius: 20px;
+            color: #e9f0ff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* ================= START BUTTON ================= */
+
+        .start-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 205px;
+            padding: 17px 32px;
+            background: linear-gradient(135deg, #ff9800, #f4511e);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 35px;
+            font-size: 19px;
+            font-weight: 800;
+            box-shadow: 0 10px 28px rgba(255, 112, 67, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(255, 112, 67, 0.5);
+        }
+
+        .start-note {
+            margin-top: 13px;
+            font-size: 12px;
+            color: #9eb2d3;
+        }
+
+        /* ================= RIGHT CARD ================= */
+
+        .cbt-card {
+            background: rgba(255, 255, 255, 0.085);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 25px;
+            padding: 34px 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-top {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 13px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #123f91;
+            font-size: 30px;
+        }
+
+        .cbt-card h2 {
+            font-size: 27px;
+            color: #ffd54f;
+            margin-bottom: 7px;
+        }
+
+        .card-subtitle {
+            color: #c5d3ea;
+            font-size: 13px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        }
+
+        .feature:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 43px;
+            height: 43px;
+            flex: 0 0 43px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(18, 63, 145, 0.9);
+            font-size: 19px;
+        }
+
+        .feature-text h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .feature-text p {
+            color: #b9c9e2;
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        /* ================= BOTTOM STRIP ================= */
+
+        .cbt-bottom {
+            background: #020b1c;
+            padding: 22px 7%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .cbt-bottom p {
+            color: #aebed7;
+            font-size: 13px;
+        }
+
+        .cbt-bottom strong {
+            color: #ffd54f;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 950px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 18px;
+                padding: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .cbt-hero {
+                padding: 55px 25px;
+            }
+
+            .cbt-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                max-width: 650px;
+            }
+
+            .cbt-content {
+                text-align: center;
+            }
+
+            .cbt-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .highlights {
+                justify-content: center;
+            }
+
+            .start-btn {
+                margin: auto;
+            }
+
+            .cbt-card {
+                width: 100%;
+            }
+
+            .admission-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .brand-top {
+                font-size: 19px;
+            }
+
+            .brand img {
+                width: 52px;
+                height: 52px;
+            }
+
+            .menu {
+                gap: 10px;
+            }
+
+            .menu a {
+                font-size: 12px;
+            }
+
+            .payment-btn {
+                padding: 7px 10px;
+            }
+
+            .cbt-content h1 {
+                font-size: 45px;
+            }
+
+            .cbt-subtitle {
+                font-size: 22px;
+            }
+
+            .cbt-description {
+                font-size: 16px;
+            }
+
+            .cbt-card {
+                padding: 26px 20px;
+            }
+
+            .cbt-card h2 {
+                font-size: 24px;
+            }
+
+            .start-btn {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <img src="assets/logo.png"
+                 alt="Extra Effort Career Classes Logo">
+
+            <div class="brand-text">
+
+                <div class="brand-top">
+                    <span class="extra">EXTRA</span>
+                    <span class="effort">EFFORT</span>
+                </div>
+
+                <div class="brand-bottom">
+                    CAREER CLASSES
+                </div>
+
+                <div class="brand-course">
+                    NEET • JEE • 10+2 BOARD
+                </div>
+
+                <div class="brand-tagline">
+                    Extra Effort Today • Sure Success Tomorrow!
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <ul class="menu">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="courses.html">Courses</a>
+                </li>
+
+                <li>
+                    <a href="cbt.html" class="cbt-nav">CBT</a>
+                </li>
+
+                <li>
+                    <a href="payment.html" class="payment-btn">
+                        Fee<br>Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="results.html">Results</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= CBT HERO ================= -->
+
+    <section class="cbt-hero">
+
+        <div class="cbt-container">
+
+            <!-- LEFT -->
+
+            <div class="cbt-content">
+
+                <div class="eyebrow">
+                    💻 EECC • ONLINE TEST SERIES
+                </div>
+
+                <h1>
+                    <span class="yellow">CBT</span>
+                    <span class="orange">EXAM</span>
+                </h1>
+
+                <div class="cbt-subtitle">
+                    NEET Biology Computer Based Tests
+                </div>
+
+                <p class="cbt-description">
+                    Practice Biology in a structured,
+                    time-bound computer-based examination
+                    environment designed for serious NEET aspirants.
+                </p>
+
+                <div class="highlights">
+
+                    <div class="highlight">
+                        📝 Practice Tests
+                    </div>
+
+                    <div class="highlight">
+                        ⏱️ Timed Tests
+                    </div>
+
+                    <div class="highlight">
+                        🎯 NEET Focused
+                    </div>
+
+                    <div class="highlight">
+                        📊 Performance Analysis
+                    </div>
+
+                </div>
+
+
+                <!-- IMPORTANT: EXISTING CBT ENGINE LINK -->
+
+                <a href="https://script.google.com/macros/s/AKfycbyeK8HMVNSqPTUjParkUPM1VHxf3apGV31yn0Wz5lCKTZB_bHUChOAE0ySRPiZiJDysdA/exec"
+                   class="start-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    🚀 START CBT
+
+                </a>
+
+                <div class="start-note">
+                    Secure access to the EECC Online Test Portal
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="cbt-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        🎓
+                    </div>
+
+                    <h2>
+                        Why Practice CBT?
+                    </h2>
+
+                    <div class="card-subtitle">
+                        Build speed • accuracy • confidence
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📝
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Online Examination
+                        </h4>
+
+                        <p>
+                            Attempt structured Biology tests
+                            through a computer-based interface.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ⏱️
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Time-Bound Practice
+                        </h4>
+
+                        <p>
+                            Develop speed and accuracy under
+                            examination conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🎯
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            NEET Biology Focus
+                        </h4>
+
+                        <p>
+                            Practice with a preparation-oriented
+                            Biology testing environment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <div class="feature-text">
+
+                        <h4>
+                            Result & Analysis
+                        </h4>
+
+                        <p>
+                            Complete your test and view your
+                            available performance information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOTTOM ================= -->
+
+    <section class="cbt-bottom">
+
+        <p>
+            <strong>EECC CBT EXAM PORTAL</strong>
+            &nbsp; • &nbsp;
+            Extra Effort Today • Sure Success Tomorrow!
+        </p>
+
+    </section>
+
+
+</body>
+
+</html>
