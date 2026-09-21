@@ -123,173 +123,571 @@ body{
 
 }
 
-
-
-/* ===============================
+/* =========================================
    HERO SECTION
-================================ */
+   COURSE FOCUSED FINAL LAYOUT
+========================================= */
 
-.landing-hero{
+.landing-hero {
 
-    min-height:80vh;
+    min-height: 80vh;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: flex-start;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    gap:40px;
+    gap: 35px;
 
-    padding:50px 8%;
+    padding: 28px 6%;
+
+}
+
+
+
+/* =========================================
+   LEFT COURSE CONTENT
+========================================= */
+
+.hero-content {
+
+    width: 61%;
+
+    padding-top: 5px;
+
+}
+
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.hero-badge {
+
+    display: inline-block;
+
+    background: #F57C00;
+
+    color: #ffffff;
+
+    padding: 7px 17px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* =========================================
+   COURSE TITLE
+   Approx. 60% larger
+========================================= */
+
+.hero-content h1 {
+
+    font-size: 54px;
+
+    line-height: 1.08;
+
+    margin: 0 0 13px 0;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: #ffcc33;
+
+    margin-top: 4px;
+
+}
+
+
+
+/* =========================================
+   COURSE MESSAGE
+========================================= */
+
+.hero-content h2 {
+
+    font-size: 22px;
+
+    line-height: 1.35;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================================
+   OFFER BOX
+========================================= */
+
+.course-offer-box {
+
+    margin: 13px 0 15px 0;
+
+    padding: 14px 18px;
+
+    max-width: 370px;
 
     background:
+        linear-gradient(
+            135deg,
+            #0b8f3c,
+            #18c964
+        );
 
-    linear-gradient(
-    135deg,
-    #08142b,
-    #214e8a
-    );
+    border-radius: 13px;
 
-}
+    color: #ffffff;
 
-
-
-.hero-content{
-
-    width:55%;
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.22);
 
 }
 
 
 
-.hero-badge{
+.offer-title {
 
-    display:inline-block;
+    font-size: 13px;
 
-    background:#F57C00;
+    font-weight: 800;
 
-    padding:8px 20px;
+    margin-bottom: 8px;
 
-    border-radius:30px;
+}
 
+
+
+.price-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+
+.old-fee {
+
+    font-size: 18px;
+
+    text-decoration: line-through;
+
+    opacity: .85;
+
+}
+
+
+
+.arrow {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+}
+
+
+
+.new-fee {
+
+    font-size: 31px;
+
+    font-weight: 900;
+
+    color: #fff700;
+
+}
+
+
+
+.saving-text {
+
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.hero-highlights {
+
+    margin: 13px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+
+.hero-highlights div {
+
+    background:
+        rgba(255,255,255,0.10);
+
+    padding: 6px 9px;
+
+    border-radius: 6px;
+
+}
+
+
+
+/* =========================================
+   YELLOW DEMO BUTTON
+========================================= */
+
+.hero-button {
+
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFD600,
+            #FFB300
+        );
+
+    color: #08142b !important;
+
+    padding: 13px 28px;
+
+    border-radius: 32px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    border: 2px solid #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(255,193,7,.45);
+
+    transition: all .25s ease;
+
+}
+
+
+
+.hero-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(255,193,7,.65);
+
+}
+
+
+
+/* =========================================
+   RIGHT SIDE
+   RAJESH SIR PHOTO
+========================================= */
+
+.hero-image {
+
+    width: 34%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding-top: 0;
+
+    margin-top: -12px;
+
+}
+
+
+
+/* =========================================
+   RAJESH SIR PHOTO
+========================================= */
+
+.hero-image img {
+
+    width: 100%;
+
+    max-width: 360px;
+
+    border-radius: 20px;
+
+    filter:
+        drop-shadow(
+            0 14px 24px rgba(0,0,0,.35)
+        );
+
+}
+
+
+/* =========================================
+   PROFILE INFORMATION
+   BELOW PHOTO
+========================================= */
+
+.hero-profile-info {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin-top: 14px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+/* Experience Highlight */
+
+.profile-experience {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+
+}
+
+
+.profile-experience strong {
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+.profile-experience span {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+}
+
+
+/* Previous Organisation */
+
+.profile-role {
+
+    margin-top: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #f5f5f5;
+
+    line-height: 1.4;
+
+}
+
+
+/* Target Audience */
+
+.profile-target {
+
+    margin-top: 6px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #ffcc33;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* Subtle glow for credibility block */
+
+.hero-profile-info {
+
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   COURSE OFFER BOX
+========================== */
+
+.course-offer-box {
+
+    margin: 24px 0;
+    padding: 18px 22px;
+    background: linear-gradient(135deg,#0b8f3c,#18c964);
+    border-radius: 15px;
+    color:white;
+    max-width:420px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.20);
+
+}
+
+
+.offer-title {
+
+    font-size:15px;
+    font-weight:800;
+    margin-bottom:12px;
+
+}
+
+
+.price-section {
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+
+.old-fee {
+
+    font-size:22px;
+    text-decoration:line-through;
+    opacity:0.8;
+
+}
+
+
+.arrow {
+
+    font-size:22px;
     font-weight:bold;
 
-    margin-bottom:20px;
+}
+
+
+.new-fee {
+
+    font-size:34px;
+    font-weight:900;
+    color:#fff700;
+
+}
+
+
+.saving-text {
+
+    margin-top:8px;
+    font-size:14px;
+    font-weight:700;
 
 }
 
 
 
-.hero-content h1{
 
-    font-size:55px;
-
-    line-height:1.15;
-
-    margin-bottom:20px;
-
-}
+/* =========================
+   HERO HIGHLIGHTS
+========================== */
 
 
-.hero-content h1 span{
+.hero-highlights {
 
-    display:block;
-
-    color:#ffcc33;
+    margin:20px 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    font-size:15px;
+    font-weight:600;
 
 }
 
 
+.hero-highlights div {
 
-.hero-content h2{
+    background:rgba(255,255,255,0.10);
+    padding:8px 10px;
+    border-radius:8px;
+
+}
+
+
+
+
+@media(max-width:600px){
+
+.hero-highlights{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.new-fee{
 
     font-size:28px;
 
-    line-height:1.5;
-
-    margin-bottom:25px;
-
 }
 
 
+.course-offer-box{
 
-.hero-content strong{
-
-    color:#ff9800;
-
-}
-
-
-
-.hero-experience{
-
-    font-size:22px;
-
-    line-height:1.6;
-
-    margin-bottom:15px;
+    padding:15px;
 
 }
 
-
-
-.hero-target{
-
-    font-size:20px;
-
-    color:#d8e6ff;
-
-    margin-bottom:35px;
-
 }
-
-
-
-.hero-button{
-
-    display:inline-block;
-
-    background:#F57C00;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:16px 35px;
-
-    border-radius:40px;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-}
-
-
-
-.hero-image{
-
-    width:35%;
-
-    text-align:center;
-
-}
-
-
-.hero-image img{
-
-    width:100%;
-
-    max-width:420px;
-
-    border-radius:25px;
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.4);
-
-}
-
 
 
 /* ===============================
@@ -562,7 +960,7 @@ body{
 }
 
 /* =====================================
-   FREE 2-DAYS MASTERCLASS SECTION
+    2-DAYS MASTERCLASS SECTION
 ===================================== */
 
 
@@ -832,5 +1230,222 @@ body{
 
     }
 
+
+}
+/* =========================================
+   EECC FLOATING PAGE SCROLL BUTTON
+   DOWN → TOP/MIDDLE
+   UP   → BOTTOM
+========================================= */
+
+.page-scroll-btn {
+
+    position: fixed;
+
+    right: 22px;
+    top: 50%;
+
+    width: 58px;
+    height: 58px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 3px solid #ffffff;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F57C00,
+            #FF9800
+        );
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.35),
+        0 0 12px rgba(255,152,0,0.55);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* =========================================
+   THICK ARROW
+========================================= */
+
+#pageScrollArrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 50px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    text-shadow:
+        0 2px 3px rgba(0,0,0,0.35);
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.page-scroll-btn:hover {
+
+    transform:
+        translateY(-50%)
+        scale(1.10);
+
+    background:
+        linear-gradient(
+            145deg,
+            #FF9800,
+            #F57C00
+        );
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.40),
+        0 0 18px rgba(255,193,7,0.75);
+
+}
+
+
+/* =========================================
+   PULSE / BLINK
+========================================= */
+
+.page-scroll-btn::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -5px;
+
+    border-radius: 50%;
+
+    border: 2px solid
+        rgba(255,193,7,0.55);
+
+    animation:
+        scrollButtonPulse 1.8s infinite;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes scrollButtonPulse {
+
+    0% {
+
+        transform: scale(0.95);
+
+        opacity: 0.8;
+
+    }
+
+    70% {
+
+        transform: scale(1.12);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1.12);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .landing-hero {
+
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 30px 6%;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .hero-image {
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        order: 2;
+
+    }
+
+
+    .hero-image img {
+
+        max-width: 320px;
+
+    }
+
+
+    .hero-profile-info {
+
+        max-width: 320px;
+
+    }
 
 }
