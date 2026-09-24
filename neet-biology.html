@@ -41,263 +41,1620 @@
 
 
     <!-- =========================
-         CBT SECTION CSS
-    ========================== -->
+     EECC CBT SECTION CSS
+     FINAL CLEAN DESIGN
+========================== -->
 
-    <style>
+<style>
 
-        /* =========================
-           CBT PACKAGE SECTION
-        ========================== */
+/* ==========================================
+   CBT MAIN SECTION
+========================================== */
 
-        .cbt-section {
-            background: linear-gradient(135deg, #061b4f, #0b3c91);
-            padding: 65px 7%;
-            color: #ffffff;
-            text-align: center;
-        }
+.cbt-section {
 
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #123fa0 0%,
+            #092b79 42%,
+            #04194b 100%
+        );
 
-        .cbt-badge {
-            display: inline-block;
-            background: #ff6b35;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 700;
-            padding: 9px 20px;
-            border-radius: 30px;
-            margin-bottom: 18px;
-        }
+    padding: 65px 5% 55px;
 
+    color: #ffffff;
 
-        .cbt-section h2 {
-            margin: 0;
-            font-size: 38px;
-            font-weight: 800;
-        }
+    text-align: center;
 
+    overflow: hidden;
+}
 
-        .cbt-section h2 span {
-            color: #ffb52e;
-        }
 
+/* ==========================================
+   CBT HEADER
+========================================== */
 
-        .cbt-subtitle {
-            margin: 12px auto 30px;
-            max-width: 750px;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #e8efff;
-        }
+.cbt-header {
 
+    max-width: 1050px;
 
-        /* PRICE */
+    margin: 0 auto 28px;
 
-        .cbt-price-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            background: rgba(255,255,255,0.10);
-            border: 1px solid rgba(255,255,255,0.20);
-            border-radius: 15px;
-            padding: 15px 28px;
-            margin-bottom: 35px;
-        }
+}
 
 
-        .cbt-old-price {
-            color: #d9d9d9;
-            font-size: 17px;
-            text-decoration: line-through;
-        }
+.cbt-badge {
 
+    display: inline-block;
 
-        .cbt-new-price {
-            color: #ffb52e;
-            font-size: 32px;
-            font-weight: 900;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #ff382d,
+            #ff9f1c
+        );
 
+    color: #ffffff;
 
-        .cbt-offer {
-            background: #ff5722;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 800;
-            padding: 7px 12px;
-            border-radius: 20px;
-        }
+    padding: 8px 22px;
 
+    border-radius: 30px;
 
-        /* TEST CARDS */
+    font-size: 13px;
 
-        .cbt-tests {
-            max-width: 1100px;
-            margin: 0 auto 35px;
+    font-weight: 900;
 
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
+    letter-spacing: .4px;
 
+    margin-bottom: 15px;
 
-        .cbt-test-card {
-            background: #ffffff;
-            color: #15213b;
-            border-radius: 14px;
-            padding: 24px 16px;
-            min-height: 150px;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.25);
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+}
 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-        }
 
+.cbt-header h2 {
 
-        .cbt-test-number {
-            color: #ff6b35;
-            font-size: 30px;
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
+    margin: 0;
 
+    font-size: 43px;
 
-        .cbt-test-card h3 {
-            font-size: 17px;
-            margin: 5px 0 8px;
-        }
+    line-height: 1.12;
 
+    font-weight: 900;
 
-        .cbt-test-card p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.45;
-            color: #555;
-        }
+    letter-spacing: -.5px;
 
+}
 
-        /* FEATURES */
 
-        .cbt-features {
-            max-width: 850px;
-            margin: 0 auto 30px;
+.cbt-header h2 span {
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px 30px;
+    color: #ffb52e;
 
-            text-align: left;
-        }
+}
 
 
-        .cbt-feature {
-            font-size: 15px;
-            color: #ffffff;
-        }
+.cbt-subtitle {
 
+    margin: 12px auto 7px;
 
-        .cbt-feature::first-letter {
-            color: #ffb52e;
-        }
+    max-width: 900px;
 
+    font-size: 18px;
 
-        /* CTA */
+    line-height: 1.45;
 
-        .cbt-cta {
-            display: inline-block;
+    font-weight: 700;
 
-            background: linear-gradient(135deg, #ff7a18, #ffb52e);
-            color: #ffffff;
+}
 
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 17px;
 
-            padding: 14px 32px;
-            border-radius: 30px;
+.cbt-intro {
 
-            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    margin: 7px auto 0;
 
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
-        }
+    max-width: 850px;
 
+    font-size: 14px;
 
-        .cbt-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 9px 25px rgba(0,0,0,0.30);
-        }
+    line-height: 1.5;
 
+    color: #dce8ff;
 
-        .cbt-bottom-line {
-            margin-top: 18px;
-            font-size: 14px;
-            color: #dbe7ff;
-        }
+}
 
 
-        /* =========================
-           MOBILE
-        ========================== */
+/* ==========================================
+   CHOOSE YOUR CBT PLAN
+========================================== */
 
-        @media (max-width: 900px) {
+.cbt-plan-heading {
 
-            .cbt-tests {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    display: inline-flex;
 
-        }
+    align-items: center;
 
+    justify-content: center;
 
-        @media (max-width: 600px) {
+    gap: 8px;
 
-            .cbt-section {
-                padding: 45px 5%;
-            }
+    margin: 0 auto 25px;
 
+    padding: 8px 22px;
 
-            .cbt-section h2 {
-                font-size: 28px;
-            }
+    border-radius: 30px;
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,91,255,.45),
+            rgba(0,43,150,.55)
+        );
 
-            .cbt-subtitle {
-                font-size: 16px;
-            }
+    border:
+        1px solid rgba(60,150,255,.55);
 
+    font-size: 17px;
 
-            .cbt-price-box {
-                flex-wrap: wrap;
-                gap: 8px 12px;
-            }
+    font-weight: 900;
 
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.20);
 
-            .cbt-new-price {
-                font-size: 28px;
-            }
+}
 
 
-            .cbt-tests {
-                grid-template-columns: 1fr;
-            }
+/* ==========================================
+   THREE PLAN CARDS
+========================================== */
 
+.cbt-plans {
 
-            .cbt-features {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
+    max-width: 1250px;
 
+    margin: 0 auto 45px;
 
-            .cbt-test-card {
-                min-height: auto;
-            }
+    display: grid;
 
-        }
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    </style>
+    gap: 18px;
+
+    align-items: stretch;
+
+}
+
+
+/* ==========================================
+   BASIC CARD
+========================================== */
+
+.cbt-plan-card {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f4f7fc 100%
+        );
+
+    color: #14213d;
+
+    border-radius: 15px;
+
+    padding: 17px 15px 13px;
+
+    border:
+        2px solid #2b8cff;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.30);
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.cbt-plan-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.35);
+
+}
+
+
+/* CLASS 11 */
+
+.cbt-class11 {
+
+    border-color:
+        #318dff;
+
+}
+
+
+/* CLASS 12 */
+
+.cbt-class12 {
+
+    border-color:
+        #ff9c00;
+
+}
+
+
+/* DROPPER */
+
+.cbt-dropper {
+
+    border-color:
+        #8d45e8;
+
+}
+
+
+/* ==========================================
+   CLASS 12 FEATURED BADGE
+========================================== */
+
+.cbt-popular {
+
+    position: absolute;
+
+    top: -13px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 3;
+
+    white-space: nowrap;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6b00,
+            #ffb52e
+        );
+
+    color: #ffffff;
+
+    padding: 6px 17px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================
+   CBT CARD TITLE
+========================================== */
+
+.cbt-plan-label {
+
+    margin: 0 0 4px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: #555;
+
+    letter-spacing: .8px;
+
+}
+
+
+.cbt-plan-top h3 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+
+    font-weight: 950;
+
+    color: #13234a;
+
+}
+
+
+/* ==========================================
+   GREEN STUDENT STRIP
+========================================== */
+
+.cbt-student-strip {
+
+    margin:
+        7px auto 5px;
+
+    width: 92%;
+
+    padding: 6px 8px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #08a84f,
+            #00c85a
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,.16);
+
+}
+
+
+/* ==========================================
+   BIG TEST NUMBER
+========================================== */
+
+.cbt-big-number {
+
+    margin-top: 7px;
+
+    font-size: 61px;
+
+    line-height: .95;
+
+    font-weight: 950;
+
+    color: #1755ad;
+
+}
+
+
+.cbt-class12 .cbt-big-number {
+
+    color: #f45120;
+
+}
+
+
+.cbt-dropper .cbt-big-number {
+
+    color: #5420b8;
+
+}
+
+
+.cbt-test-label {
+
+    margin-top: 4px;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: .8px;
+
+    color: #15213b;
+
+}
+
+
+/* ==========================================
+   TEST BREAKDOWN
+========================================== */
+
+.cbt-plan-breakdown {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin:
+        17px 0 14px;
+
+}
+
+
+.cbt-five-items {
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+}
+
+
+.cbt-plan-breakdown div {
+
+    background:
+        #edf4ff;
+
+    border:
+        1px solid #c8def8;
+
+    border-radius: 7px;
+
+    padding: 7px 3px;
+
+    min-width: 0;
+
+}
+
+
+.cbt-class12 .cbt-plan-breakdown div {
+
+    background:
+        #fff6e8;
+
+    border-color:
+        #f4d9aa;
+
+}
+
+
+.cbt-plan-breakdown strong {
+
+    display: block;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    font-weight: 950;
+
+    color: #1755ad;
+
+}
+
+
+.cbt-class12 .cbt-plan-breakdown strong {
+
+    color: #f45120;
+
+}
+
+
+.cbt-plan-breakdown span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    color: #27364d;
+
+}
+
+
+/* ==========================================
+   DROPPER COMBINATION
+========================================== */
+
+.cbt-combination {
+
+    margin:
+        18px 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+}
+
+
+.combination-box,
+.combination-total {
+
+    min-width: 65px;
+
+    padding: 7px 6px;
+
+    border-radius: 7px;
+
+    background:
+        #edf4ff;
+
+    border:
+        1px solid #c8def8;
+
+}
+
+
+.combination-box strong,
+.combination-total strong {
+
+    display: block;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    color: #1755ad;
+
+}
+
+
+.combination-box span,
+.combination-total span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    color: #3d4a5d;
+
+}
+
+
+.combination-total {
+
+    background:
+        #f0e8ff;
+
+    border-color:
+        #d4b9ff;
+
+}
+
+
+.combination-total strong {
+
+    color: #5420b8;
+
+}
+
+
+.combination-plus,
+.combination-equal {
+
+    font-size: 20px;
+
+    font-weight: 950;
+
+    color: #5420b8;
+
+}
+
+
+/* ==========================================
+   PRICE AREA
+========================================== */
+
+.cbt-price-area {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: auto;
+
+}
+
+
+/* PACKAGE FEE */
+
+.cbt-package-fee {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.cbt-package-label {
+
+    font-size: 13px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    color: #17264a;
+
+    margin-bottom: 3px;
+
+}
+
+
+.cbt-old-price {
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #202020;
+
+    text-decoration:
+        line-through;
+
+    text-decoration-thickness: 2px;
+
+    text-decoration-color:
+        #e00000;
+
+}
+
+
+/* ==========================================
+   STARBURST OFFER PRICE
+========================================== */
+
+.cbt-offer-star {
+
+    position: relative;
+
+    width: 130px;
+
+    height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #f51e1e;
+
+    color: #fff;
+
+    clip-path:
+        polygon(
+            50% 0%,
+            58% 9%,
+            68% 3%,
+            73% 14%,
+            85% 10%,
+            87% 22%,
+            98% 25%,
+            92% 36%,
+            100% 45%,
+            91% 53%,
+            97% 65%,
+            86% 68%,
+            87% 81%,
+            74% 78%,
+            67% 91%,
+            57% 84%,
+            48% 100%,
+            40% 89%,
+            29% 96%,
+            25% 84%,
+            13% 88%,
+            14% 75%,
+            2% 70%,
+            9% 59%,
+            0% 50%,
+            10% 42%,
+            3% 30%,
+            15% 27%,
+            13% 15%,
+            26% 18%,
+            32% 5%,
+            42% 12%
+        );
+
+    filter:
+        drop-shadow(
+            0 5px 5px rgba(0,0,0,.20)
+        );
+
+}
+
+
+.cbt-offer-price {
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    font-weight: 950;
+
+    color: #fff700;
+
+}
+
+
+.cbt-offer-text {
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: .4px;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   PACKAGE NOTE
+========================================== */
+
+.cbt-price-note {
+
+    min-height: 25px;
+
+    margin:
+        2px 0 9px;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    color: #666;
+
+}
+
+
+/* ==========================================
+   ENROLL BUTTON
+========================================== */
+
+.cbt-plan-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 11px 15px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9f00,
+            #ff6f00
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 5px 12px rgba(255,112,0,.28);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.cbt-plan-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(255,112,0,.38);
+
+}
+
+
+/* ==========================================
+   WHY PRACTICE
+========================================== */
+
+.cbt-value-section {
+
+    max-width: 1250px;
+
+    margin: 0 auto 38px;
+
+}
+
+
+.cbt-value-section h3 {
+
+    margin:
+        0 0 18px;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+}
+
+
+.cbt-value-section h3::first-letter {
+
+    color: #ffffff;
+
+}
+
+
+.cbt-value-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.cbt-value-card {
+
+    min-height: 105px;
+
+    padding: 13px 8px;
+
+    background:
+        rgba(0,80,210,.28);
+
+    border:
+        1px solid rgba(45,150,255,.65);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.cbt-value-icon {
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    margin-bottom: 7px;
+
+}
+
+
+.cbt-value-card h4 {
+
+    margin:
+        0 0 5px;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 950;
+
+    color: #ffb52e;
+
+}
+
+
+.cbt-value-card p {
+
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   CBT JOURNEY
+========================================== */
+
+.cbt-journey {
+
+    max-width: 1100px;
+
+    margin: 0 auto 32px;
+
+}
+
+
+.cbt-journey h3 {
+
+    margin:
+        0 0 18px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+}
+
+
+.cbt-journey-flow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 14px;
+
+    background:
+        rgba(0,70,190,.25);
+
+    border:
+        1px solid rgba(50,155,255,.45);
+
+    border-radius: 14px;
+
+}
+
+
+.journey-step {
+
+    flex:
+        1;
+
+    min-width: 0;
+
+    padding: 10px 6px;
+
+    background:
+        rgba(0,86,210,.45);
+
+    border:
+        1px solid rgba(55,165,255,.70);
+
+    border-radius: 8px;
+
+}
+
+
+.journey-number {
+
+    font-size: 11px;
+
+    font-weight: 950;
+
+    color: #ffbd22;
+
+    margin-bottom: 3px;
+
+}
+
+
+.journey-step strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 950;
+
+}
+
+
+.journey-step span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    line-height: 1.25;
+
+    color: #dce8ff;
+
+}
+
+
+.journey-arrow {
+
+    flex-shrink: 0;
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    color: #ffb52e;
+
+}
+
+
+/* ==========================================
+   FINAL CTA
+========================================== */
+
+.cbt-final-cta {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background:
+        rgba(0,78,180,.35);
+
+    border:
+        1px solid rgba(50,160,255,.75);
+
+    border-radius: 13px;
+
+}
+
+
+.cbt-final-text {
+
+    text-align: left;
+
+}
+
+
+.cbt-final-text h3 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+    font-weight: 950;
+
+}
+
+
+.cbt-final-text p {
+
+    margin:
+        4px 0 0;
+
+    font-size: 12px;
+
+    color: #dbe7ff;
+
+}
+
+
+.cbt-final-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.cbt-final-button {
+
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+.cbt-final-button:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.cbt-button-11 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #08b94f,
+            #00d865
+        );
+
+}
+
+
+.cbt-button-12 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9a00,
+            #ff5d00
+        );
+
+}
+
+
+.cbt-button-dropper {
+
+    background:
+        linear-gradient(
+            135deg,
+            #8d35e8,
+            #c52cff
+        );
+
+}
+
+
+/* ==========================================
+   BOTTOM LINE
+========================================== */
+
+.cbt-bottom-line {
+
+    margin-top: 17px;
+
+    font-size: 12px;
+
+    color: #dbe7ff;
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .cbt-plans {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .cbt-plan-card {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+
+    .cbt-value-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .cbt-final-cta {
+
+        flex-direction:
+            column;
+
+        text-align: center;
+
+    }
+
+
+    .cbt-final-text {
+
+        text-align:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE / TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+    .cbt-header h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .cbt-plans {
+
+        grid-template-columns:
+            1fr;
+
+        max-width: 480px;
+
+        gap: 25px;
+
+    }
+
+
+    .cbt-plan-card {
+
+        padding:
+            22px 18px 17px;
+
+    }
+
+
+    .cbt-big-number {
+
+        font-size: 58px;
+
+    }
+
+
+    .cbt-value-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .cbt-journey-flow {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .journey-step {
+
+        flex:
+            0 0 30%;
+
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 550px) {
+
+    .cbt-section {
+
+        padding:
+            48px 4% 40px;
+
+    }
+
+
+    .cbt-header h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .cbt-subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .cbt-intro {
+
+        font-size: 13px;
+
+    }
+
+
+    .cbt-plan-heading {
+
+        font-size: 14px;
+
+    }
+
+
+    .cbt-plan-top h3 {
+
+        font-size: 26px;
+
+    }
+
+
+    .cbt-student-strip {
+
+        font-size: 13px;
+
+    }
+
+
+    .cbt-plan-breakdown {
+
+        gap: 5px;
+
+    }
+
+
+    .cbt-five-items {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .cbt-five-items div:nth-child(4) {
+
+        grid-column:
+            1 / 2;
+
+    }
+
+
+    .cbt-five-items div:nth-child(5) {
+
+        grid-column:
+            2 / 3;
+
+    }
+
+
+    .cbt-price-area {
+
+        gap: 8px;
+
+    }
+
+
+    .cbt-old-price {
+
+        font-size: 18px;
+
+    }
+
+
+    .cbt-offer-star {
+
+        width: 115px;
+
+        height: 70px;
+
+    }
+
+
+    .cbt-offer-price {
+
+        font-size: 23px;
+
+    }
+
+
+    .cbt-value-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .cbt-value-card {
+
+        min-height: 115px;
+
+    }
+
+
+    .cbt-journey-flow {
+
+        flex-direction:
+            column;
+
+        gap: 5px;
+
+    }
+
+
+    .journey-step {
+
+        flex:
+            none;
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+
+    .journey-arrow {
+
+        transform:
+            rotate(90deg);
+
+    }
+
+
+    .cbt-final-buttons {
+
+        flex-direction:
+            column;
+
+        width: 100%;
+
+    }
+
+
+    .cbt-final-button {
+
+        width: 100%;
+
+    }
+
+
+    .cbt-bottom-line {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .cbt-header h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .cbt-plan-breakdown span {
+
+        font-size: 8px;
+
+    }
+
+
+    .cbt-price-area {
+
+        gap: 4px;
+
+    }
+
+
+    .cbt-package-label {
+
+        font-size: 11px;
+
+    }
+
+
+    .cbt-old-price {
+
+        font-size: 16px;
+
+    }
+
+
+    .cbt-offer-star {
+
+        width: 108px;
+
+        height: 66px;
+
+    }
+
+
+    .cbt-offer-price {
+
+        font-size: 21px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -617,143 +1974,146 @@
 
 
 
-        <!-- ==========================================
-             NEW: NEET 2027 BIOLOGY CBT PACKAGE
-        =========================================== -->
+       <!-- ==========================================
+     EECC NEET 2027 BIOLOGY CBT TEST SERIES
+     FINAL CBT SECTION
+=========================================== -->
+
+<section class="cbt-section" id="cbt">
 
 
-        <section class="cbt-section"
-                 id="cbt">
+    <!-- ======================================
+         CBT HEADER
+    ======================================= -->
+
+    <div class="cbt-header">
+
+        <div class="cbt-badge">
+            ⚡ SPECIAL LAUNCH OFFER ⚡
+        </div>
 
 
-            <div class="cbt-badge">
+        <h2>
+            💻 NEET 2027 BIOLOGY
+            <span>CBT TEST SERIES</span>
+        </h2>
 
-                ⚡ SPECIAL LAUNCH OFFER ⚡
+
+        <p class="cbt-subtitle">
+            Practice Like the Real Exam • Analyse Every Attempt •
+            Improve Your Biology Performance
+        </p>
+
+
+        <p class="cbt-intro">
+            Choose the CBT package according to your preparation level
+            and practice Biology in a real Computer-Based Test environment.
+        </p>
+
+    </div>
+
+
+
+    <!-- ======================================
+         CHOOSE YOUR PLAN
+    ======================================= -->
+
+    <div class="cbt-plan-heading">
+        🎯 CHOOSE YOUR CBT PLAN
+    </div>
+
+
+
+    <div class="cbt-plans">
+
+
+        <!-- ==================================
+             CLASS 11
+        =================================== -->
+
+        <div class="cbt-plan-card cbt-class11">
+
+
+            <div class="cbt-plan-top">
+
+                <div class="cbt-plan-label">
+                    CBT
+                </div>
+
+                <h3>
+                    CLASS 11
+                </h3>
 
             </div>
 
 
-            <h2>
-
-                💻 NEET 2027 Biology 
-                <span>CBT Package</span>
-
-            </h2>
+            <div class="cbt-student-strip">
+                CLASS 11 STUDENTS
+            </div>
 
 
-            <p class="cbt-subtitle">
+            <div class="cbt-big-number">
+                30
+            </div>
 
-                Complete Computer Based Test practice on mobile & desktop devices,
-                designed to build accuracy, speed and
-                NEET exam confidence.
 
-            </p>
+            <div class="cbt-test-label">
+                CBT TESTS
+            </div>
+
+
+            <div class="cbt-plan-breakdown">
+
+
+                <div>
+                    <strong>19</strong>
+                    <span>Chapter Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>6</strong>
+                    <span>Unit Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>5</strong>
+                    <span>Grand Tests</span>
+                </div>
+
+
+            </div>
+
 
 
             <!-- PRICE -->
 
-
-            <div class="cbt-price-box">
-
-
-                <span class="cbt-old-price">
-
-                    ₹20/test × 70 = ₹1,400
-
-                </span>
+            <div class="cbt-price-area">
 
 
-                <span class="cbt-new-price">
+                <div class="cbt-package-fee">
 
-                    ₹999/-
-
-                </span>
-
-
-                <span class="cbt-offer">
-
-                    LAUNCH OFFER
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- TEST CATEGORIES -->
-
-
-            <div class="cbt-tests">
-
-
-                <div class="cbt-test-card">
-
-                    <div class="cbt-test-number">
-                        32
+                    <div class="cbt-package-label">
+                        Package Fee
                     </div>
 
-                    <h3>
-                        Chapter-Wise Tests
-                    </h3>
-
-                    <p>
-                        45 Questions • 45 Minutes
-                    </p>
+                    <div class="cbt-old-price">
+                        ₹2,000
+                    </div>
 
                 </div>
 
 
+                <div class="cbt-offer-star">
 
-                <div class="cbt-test-card">
-
-                    <div class="cbt-test-number">
-                        16
+                    <div class="cbt-offer-price">
+                        ₹999
                     </div>
 
-                    <h3>
-                        Unit / Combination Tests
-                    </h3>
-
-                    <p>
-                        90 Questions • 90 Minutes
-                    </p>
-
-                </div>
-
-
-
-                <div class="cbt-test-card">
-
-                    <div class="cbt-test-number">
-                        12
+                    <div class="cbt-offer-text">
+                        OFFER PRICE
                     </div>
-
-                    <h3>
-                        Grand Tests
-                    </h3>
-
-                    <p>
-                        Full Syllabus • NEET Pattern
-                    </p>
-
-                </div>
-
-
-
-                <div class="cbt-test-card">
-
-                    <div class="cbt-test-number">
-                        10
-                    </div>
-
-                    <h3>
-                        NEET 2027 Guess Papers
-                    </h3>
-
-                    <p>
-                        90 Questions • 90 Minutes
-                    </p>
 
                 </div>
 
@@ -761,67 +2121,629 @@
             </div>
 
 
-
-            <!-- KEY FEATURES -->
-
-
-            <div class="cbt-features">
-
-
-                <div class="cbt-feature">
-                    ✓ Real Computer-Based Test Experience
-                </div>
-
-
-                <div class="cbt-feature">
-                    ✓ Detailed Performance Analytics
-                </div>
-
-
-                <div class="cbt-feature">
-                    ✓ Complete Solutions &amp; Explanations
-                </div>
-
-
-                <div class="cbt-feature">
-                    ✓ Time-Management Practice
-                </div>
-
-
-                <div class="cbt-feature">
-                    ✓ NCERT-Based Biology Questions
-                </div>
-
-
-                <div class="cbt-feature">
-                    ✓ Class 11 &amp; 12 Biology Coverage
-                </div>
-
-
+            <div class="cbt-price-note">
+                Complete Class 11 Biology CBT Package
             </div>
-
-
-
-            <!-- CTA -->
 
 
             <a href="#registration"
-               class="cbt-cta">
+   class="cbt-plan-button cbt-select-package"
+   data-cbt-package="Class 11 — 30 Tests — ₹999">
 
-                🔥 ENROLL NOW — CBT BIOLOGY ₹999/-
+    ENROLL NOW →
+
+</a>
+
+
+        </div>
+
+
+
+        <!-- ==================================
+             CLASS 12
+        =================================== -->
+
+        <div class="cbt-plan-card cbt-class12">
+
+
+            <div class="cbt-popular">
+                ⭐ COMPLETE CLASS 12 PACKAGE
+            </div>
+
+
+            <div class="cbt-plan-top">
+
+                <div class="cbt-plan-label">
+                    CBT
+                </div>
+
+                <h3>
+                    CLASS 12
+                </h3>
+
+            </div>
+
+
+            <div class="cbt-student-strip">
+                CLASS 12 STUDENTS
+            </div>
+
+
+            <div class="cbt-big-number">
+                46
+            </div>
+
+
+            <div class="cbt-test-label">
+                CBT TESTS
+            </div>
+
+
+            <div class="cbt-plan-breakdown cbt-five-items">
+
+
+                <div>
+                    <strong>13</strong>
+                    <span>Chapter Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>5</strong>
+                    <span>Unit Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>4</strong>
+                    <span>Grand Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>10</strong>
+                    <span>MTFS Tests</span>
+                </div>
+
+
+                <div>
+                    <strong>14</strong>
+                    <span>Guess Papers</span>
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="cbt-price-area">
+
+
+                <div class="cbt-package-fee">
+
+                    <div class="cbt-package-label">
+                        Package Fee
+                    </div>
+
+                    <div class="cbt-old-price">
+                        ₹2,600
+                    </div>
+
+                </div>
+
+
+                <div class="cbt-offer-star">
+
+                    <div class="cbt-offer-price">
+                        ₹1,299
+                    </div>
+
+                    <div class="cbt-offer-text">
+                        OFFER PRICE
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="cbt-price-note">
+                Complete Class 12 Biology CBT Package
+            </div>
+
+
+            <a href="#registration"
+   class="cbt-plan-button cbt-select-package"
+   data-cbt-package="Class 12 — 46 Tests — ₹1,299">
+
+    ENROLL NOW →
+
+</a>
+
+
+        </div>
+
+
+
+        <!-- ==================================
+             DROPPER / 12th PASSED
+        =================================== -->
+
+        <div class="cbt-plan-card cbt-dropper">
+
+
+            <div class="cbt-plan-top">
+
+                <div class="cbt-plan-label">
+                    CBT
+                </div>
+
+                <h3>
+                    DROPPER / 12th PASSED
+                </h3>
+
+            </div>
+
+
+            <div class="cbt-student-strip">
+                DROPPER / 12th PASSED
+            </div>
+
+
+            <div class="cbt-big-number">
+                76
+            </div>
+
+
+            <div class="cbt-test-label">
+                CBT TESTS
+            </div>
+
+
+
+            <!-- COMBINATION -->
+
+            <div class="cbt-combination">
+
+
+                <div class="combination-box">
+
+                    <strong>
+                        30
+                    </strong>
+
+                    <span>
+                        CLASS 11
+                    </span>
+
+                </div>
+
+
+                <div class="combination-plus">
+                    +
+                </div>
+
+
+                <div class="combination-box">
+
+                    <strong>
+                        46
+                    </strong>
+
+                    <span>
+                        CLASS 12
+                    </span>
+
+                </div>
+
+
+                <div class="combination-equal">
+                    =
+                </div>
+
+
+                <div class="combination-total">
+
+                    <strong>
+                        76
+                    </strong>
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="cbt-price-area">
+
+
+                <div class="cbt-package-fee">
+
+                    <div class="cbt-package-label">
+                        Package Fee
+                    </div>
+
+                    <div class="cbt-old-price">
+                        ₹3,200
+                    </div>
+
+                </div>
+
+
+                <div class="cbt-offer-star">
+
+                    <div class="cbt-offer-price">
+                        ₹1,599
+                    </div>
+
+                    <div class="cbt-offer-text">
+                        OFFER PRICE
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="cbt-price-note">
+                Complete Class 11 + Class 12 Biology CBT Package
+            </div>
+
+
+          <a href="#registration"
+   class="cbt-plan-button cbt-select-package"
+   data-cbt-package="Dropper / 12th Passed — 76 Tests — ₹1,599">
+
+    ENROLL NOW →
+
+</a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ======================================
+         WHY PRACTICE WITH EECC CBT?
+    ======================================= -->
+
+    <div class="cbt-value-section">
+
+
+        <h3>
+            Why Practice with <span style="color:#ffb52e;">
+                EECC CBT?
+            </span>
+        </h3>
+
+
+        <div class="cbt-value-grid">
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    💻
+                </div>
+
+                <h4>
+                    REAL CBT EXPERIENCE
+                </h4>
+
+                <p>
+                    Practice Biology in a computer-based
+                    test environment.
+                </p>
+
+            </div>
+
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    📖
+                </div>
+
+                <h4>
+                    NCERT-BASED
+                </h4>
+
+                <p>
+                    Focused Biology practice aligned with
+                    NCERT preparation.
+                </p>
+
+            </div>
+
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    ⏱️
+                </div>
+
+                <h4>
+                    TIME MANAGEMENT
+                </h4>
+
+                <p>
+                    Develop speed and accuracy through
+                    regular CBT practice.
+                </p>
+
+            </div>
+
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    📊
+                </div>
+
+                <h4>
+                    PERFORMANCE ANALYSIS
+                </h4>
+
+                <p>
+                    Analyse your test performance and
+                    identify areas for improvement.
+                </p>
+
+            </div>
+
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    💡
+                </div>
+
+                <h4>
+                    DETAILED SOLUTIONS
+                </h4>
+
+                <p>
+                    Review answers and understand the
+                    questions after your test.
+                </p>
+
+            </div>
+
+
+
+            <div class="cbt-value-card">
+
+                <div class="cbt-value-icon">
+                    📱
+                </div>
+
+                <h4>
+                    MOBILE + DESKTOP
+                </h4>
+
+                <p>
+                    Access your CBT practice from
+                    supported mobile and desktop devices.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ======================================
+         CBT JOURNEY
+    ======================================= -->
+
+    <div class="cbt-journey">
+
+
+        <h3>
+            🎯 YOUR CBT JOURNEY
+        </h3>
+
+
+        <div class="cbt-journey-flow">
+
+
+            <div class="journey-step">
+
+                <div class="journey-number">
+                    01
+                </div>
+
+                <strong>
+                    PRACTICE
+                </strong>
+
+                <span>
+                    Take your scheduled CBT
+                </span>
+
+            </div>
+
+
+            <div class="journey-arrow">
+                →
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-number">
+                    02
+                </div>
+
+                <strong>
+                    ANALYSE
+                </strong>
+
+                <span>
+                    Check your performance
+                </span>
+
+            </div>
+
+
+            <div class="journey-arrow">
+                →
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-number">
+                    03
+                </div>
+
+                <strong>
+                    IDENTIFY
+                </strong>
+
+                <span>
+                    Find your weak areas
+                </span>
+
+            </div>
+
+
+            <div class="journey-arrow">
+                →
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-number">
+                    04
+                </div>
+
+                <strong>
+                    IMPROVE
+                </strong>
+
+                <span>
+                    Work on your mistakes
+                </span>
+
+            </div>
+
+
+            <div class="journey-arrow">
+                →
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-number">
+                    05
+                </div>
+
+                <strong>
+                    REPEAT
+                </strong>
+
+                <span>
+                    Take the next CBT
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ======================================
+         FINAL CTA
+    ======================================= -->
+
+    <div class="cbt-final-cta">
+
+
+        <div class="cbt-final-text">
+
+            <h3>
+                🚀 READY TO TEST YOURSELF?
+            </h3>
+
+            <p>
+                Practice • Analyse • Improve • Perform
+            </p>
+
+        </div>
+
+
+        <div class="cbt-final-buttons">
+
+
+            <a href="#registration"
+               class="cbt-final-button cbt-button-11">
+
+                CLASS 11 — ₹999
 
             </a>
 
 
-            <div class="cbt-bottom-line">
+            <a href="#registration"
+               class="cbt-final-button cbt-button-12">
 
-                Prepare • Practice • Perform •
-                Target <strong>360/360 in Biology</strong>
+                CLASS 12 — ₹1,299
 
-            </div>
+            </a>
 
 
-        </section>
+            <a href="#registration"
+               class="cbt-final-button cbt-button-dropper">
+
+                DROPPER — ₹1,599
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="cbt-bottom-line">
+
+        💻 Real CBT Practice
+        &nbsp; • &nbsp;
+        📖 NCERT-Based Biology
+        &nbsp; • &nbsp;
+        🎯 NEET 2027 Preparation
+
+    </div>
+
+
+</section>
 
 
 
@@ -956,7 +2878,7 @@
                         </option>
 
                         <option>
-                            6 Months Regular Course for NEET
+                            Dropper / 12th Passed
                         </option>
 
                     </select>
@@ -976,10 +2898,6 @@
 
                         <option>
                             NEET 2028
-                        </option>
-
-                        <option>
-                            NEET 2029
                         </option>
 
                     </select>
@@ -1008,20 +2926,12 @@
                             Online Regular Classes 12th
                         </option>
 
-                        <option>
-                            Online Regular Course (11th + 12th) NEET 2027     
-                        </option>
-
                         <option> 
-                            Online 6 months Course for NEET 2027
+                            Online 6 months Course(11th + 12th) for NEET 2027
                         </option>
 
                         <option>
                             Off-line 6 months Course NEET 2027 (at Kanpur, U.P Centre)
-                        </option>
-
-                        <option>
-                            Off-line Regular Classes (at Kanpur, U.P Centre)
                         </option>
 
                         <!-- NEW CBT OPTION -->
