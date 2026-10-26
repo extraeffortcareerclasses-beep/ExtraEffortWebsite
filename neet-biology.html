@@ -2985,109 +2985,86 @@
      FORM SUBMISSION
 ===================================== -->
 
-<script>
 
+<script>
 const scriptURL =
 "https://script.google.com/macros/s/AKfycbxGm9CaQHCCyB_-bT8PB6lmH1coAa5I8ike1Z8PBNlE0k1DnyGqdnxlQnwv8VQyEavK6g/exec";
 
+const form = document.getElementById("registrationForm");
 
-const form =
-document.getElementById("registrationForm");
+if (form) {
+    let isSubmitting = false;
+    const submitButton = form.querySelector('button[type="submit"]');
 
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-if(form){
+        // Prevent rapid repeated submissions
+        if (isSubmitting) return;
+        if (!form.reportValidity()) return;
 
-form.addEventListener("submit", e => {
+        isSubmitting = true;
 
-e.preventDefault();
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.dataset.originalText = submitButton.textContent;
+            submitButton.textContent = "Submitting...";
+        }
 
+        try {
+            const payload = {
+                studentName: form.elements["studentName"].value.trim(),
+                ParentName: form.elements["ParentName"].value.trim(),
+                email: form.elements["email"].value.trim().toLowerCase(),
+                whatsapp: form.elements["whatsapp"].value.trim(),
+                studentClass: form.elements["studentClass"].value,
+                neetYear: form.elements["neetYear"].value,
+                city: form.elements["city"].value.trim(),
+                mode: form.elements["mode"].value
+            };
 
-fetch(scriptURL, {
+            await fetch(scriptURL, {
+                method: "POST",
+                body: JSON.stringify(payload)
+            });
 
-method:"POST",
+            if (typeof gtag === "function") {
+                gtag("event", "conversion", {
+                    send_to: "AW-18361970070/ADQiCNiL4d4cCEJbb1bNE",
+                    value: 1.0,
+                    currency: "INR"
+                });
+            }
 
-body:JSON.stringify({
+            alert(
+                "Hey NEET Aspirant! 🎉\n\n" +
+                "Your registration request has been submitted.\n\n" +
+                "Rajesh Sir's team will contact you soon."
+            );
 
-studentName:
-form.studentName.value,
+            form.reset();
 
-email:
-form.email.value,
+        } catch (error) {
+            console.error("Registration submission error:", error);
 
-whatsapp:
-form.whatsapp.value,
+            alert(
+                "We could not confirm submission. Please check your registration sheet " +
+                "before trying again."
+            );
 
-studentClass:
-form.studentClass.value,
+        } finally {
+            isSubmitting = false;
 
-neetYear:
-form.neetYear.value,
-
-city:
-form.city.value,
-
-mode:
-form.mode.value
-
-})
-
-})
-
-
-.then(()=>{
-
-
-if(typeof gtag === "function"){
-
-gtag('event','conversion',{
-
-'send_to':
-'AW-18361970070/ADQiCNiL4d4cCEJbb1bNE',
-
-'value':1.0,
-
-'currency':'INR'
-
-});
-
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent =
+                    submitButton.dataset.originalText ||
+                    "Reserve My Demo Class / CBT";
+            }
+        }
+    });
 }
-
-
-alert(
-"Hey NEET Aspirant! 🎉\n\n"+
-"Congratulations! Your DEMO/CBT is reserved.\n\n"+
-"Rajesh Sir's team will contact you soon."
-);
-
-
-form.reset();
-
-
-})
-
-
-.catch(error=>{
-
-
-alert(
-"Submission failed. Please try again."
-);
-
-
-console.error(error);
-
-
-});
-
-
-});
-
-
-}
-
 </script>
-
-
 
 
 
