@@ -3012,16 +3012,26 @@ if (form) {
         }
 
         try {
-            const payload = {
-                studentName: form.elements["studentName"].value.trim(),
-                ParentName: form.elements["ParentName"].value.trim(),
-                email: form.elements["email"].value.trim().toLowerCase(),
-                whatsapp: form.elements["whatsapp"].value.trim(),
-                studentClass: form.elements["studentClass"].value,
-                neetYear: form.elements["neetYear"].value,
-                city: form.elements["city"].value.trim(),
-                mode: form.elements["mode"].value
-            };
+            
+const params = new URLSearchParams(window.location.search);
+
+const payload = {
+  studentName: form.elements["studentName"].value.trim(),
+  ParentName: form.elements["ParentName"].value.trim(),
+  email: form.elements["email"].value.trim().toLowerCase(),
+  whatsapp: form.elements["whatsapp"].value.trim(),
+  studentClass: form.elements["studentClass"].value,
+  neetYear: form.elements["neetYear"].value,
+  city: form.elements["city"].value.trim(),
+  mode: form.elements["mode"].value,
+
+  // Google Ads tracking
+  gclid: params.get("gclid") || "",
+  leadSource: params.has("gclid")
+    ? "Google Ads"
+    : "Website - Source Unknown"
+};
+
 
             await fetch(scriptURL, {
                 method: "POST",
