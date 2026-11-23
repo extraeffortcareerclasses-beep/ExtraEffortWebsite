@@ -135,7 +135,7 @@
 
         <div class="card">
 
-            <h2>FREE 3-DEMO REGISTRATION</h2>
+            <h2>REGISTRATION FORM</h2>
 
             <div class="offer">
                 Experience Rajesh Sir's Biology Classes before joining.
@@ -158,6 +158,14 @@
                    required
                    placeholder="Enter parent name"
                  >
+                  
+                <label for="address">Address</label>
+                <input
+                    type="text"
+                    id="address"
+                    required
+                    placeholder="Enter address"
+                >
 
                 <label for="email">Email</label>
                 <input
@@ -198,6 +206,13 @@
                     required
                     placeholder="Enter your city"
                 >
+                <label for="state">State</label>
+                <input
+                    type="text"
+                    id="state"
+                    required
+                    placeholder="Enter your state"
+                >
 
                 <label for="mode">Preferred Mode</label>
                 <select id="preferredMode" required>
@@ -207,7 +222,7 @@
               </select>
 
                 <button type="submit">
-                    Register for FREE 2-Demo
+                    Register mefor Demo Class
                 </button>
 
             </form>
@@ -235,7 +250,7 @@
 
 
         document
-            .getElementById("admissionForm")
+            .getElementById("admission open")
             .addEventListener("submit", function(event) {
 
                 event.preventDefault();
@@ -244,7 +259,7 @@
                 const button = this.querySelector("button");
 
                 const data = {
-                    type: "freeDemoRegistration",
+                    type: "Registration Form",
 
                    
                     studentName:
@@ -252,6 +267,9 @@
 
                     parentName:
                        document.getElementById("parentName").value.trim(),
+
+                    address:
+                       document.getElementById("address").value.trim(),
 
                     email:
                         document.getElementById("email").value.trim(),
@@ -300,7 +318,7 @@
                     document.getElementById("admissionForm").reset();
 
                     button.disabled = false;
-                    button.textContent = "Register for FREE Demo";
+                    button.textContent = "Register for Demo Class";
 
                 })
                 .catch(function(error) {
@@ -315,7 +333,7 @@
                         "Something went wrong. Please try again.";
 
                     button.disabled = false;
-                    button.textContent = "Register for FREE 3-Demo";
+                    button.textContent = "Register for Demo Class";
 
                 });
 
